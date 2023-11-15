@@ -1,6 +1,5 @@
 "use client";
 
-import ConnectWalletButton from "@/components/ConnectWalletButton/ConnectWalletButton";
 import DropdownMenu from "@/components/DropdownMenu/DropdownMenu";
 import {useEffect, useState} from "react";
 import {ConnectButton} from "@rainbow-me/rainbowkit";

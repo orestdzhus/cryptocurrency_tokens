@@ -6,7 +6,6 @@ import {ICoin} from "@/types/coin.interface";
 interface IProps {
     coinList: ICoin[];
 }
-
 export default function DropdownMenu({coinList}: IProps) {
 
     const [isOpen, setIsOpen] = useState(false);
@@ -30,16 +29,17 @@ export default function DropdownMenu({coinList}: IProps) {
                     <div className=" absolute h-[310px] top-[67px] w-full overflow-auto">
                         {coinList.map((item, index) => {
 
+                            const {symbol} = item;
+
+                            const upperCaseSymbol = symbol.charAt(0).toUpperCase() + symbol.slice(1);
+
                             return (
-                                <div key={item.id} className="flex h-[102px] pl-4">
-                                    <div className="w-1/4">
-                                        <strong className="pb-4 text-zinc-300 text-lg">{item.symbol}</strong>
-                                        <div className="w-[50px] pl-3">
-                                            <img className="h-[40px] w-[60px]" src={item.image} alt="coin"/>
-                                        </div>
-                                    </div>
+                                <div key={item.id} className="flex h-[80px] pl-4 items-center">
                                     <div
-                                        className="h-[40-px] w-3/4 flex items-center text-orange-300 font-mono text-2xl">{item.name}</div>
+                                        className="text-slate-200 font-bold pr-4 text-lg w-1/4">{upperCaseSymbol}
+                                    </div>
+                                    <img className="h-[50px] w-[50px]" src={item.image} alt="coin"/>
+                                    <div className="pl-8 w-2/5 text-orange-300 font-mono text-xl">{item.name}</div>
                                 </div>
                             );
                         })
