@@ -3,6 +3,7 @@
 import ConnectWalletButton from "@/components/ConnectWalletButton/ConnectWalletButton";
 import DropdownMenu from "@/components/DropdownMenu/DropdownMenu";
 import {useEffect, useState} from "react";
+import {ConnectButton} from "@rainbow-me/rainbowkit";
 
 export default function Home() {
 
@@ -29,8 +30,8 @@ export default function Home() {
                         <input className="text-2xl" type="text" defaultValue={100}/>
                         <input className="text-2xl" type="text" defaultValue={100}/>
                     </div>
-                    <div className="pt-[30px] w-3/5">
-                        <ConnectWalletButton/>
+                    <div className="pt-[30px] w-3/5 flex justify-center">
+                        <ConnectButton accountStatus={{largeScreen: 'full'}}/>
                     </div>
                 </div>
 
