@@ -16,7 +16,7 @@ export default function DropdownMenu({coinList}: IProps) {
         <div className="absolute top-[468px]">
             <div className="relative flex flex-col items-center w-[340px] h-[440px] top-8">
                 <button onClick={() => setIsOpen((prev) => !prev)}
-                        className="bg-blue-950 p-3 w-full flex items-center justify-between font-bold text-lg text-blue-300 tracking-wider border-2
+                        className="bg-gray-400 p-3 w-full flex items-center justify-between font-bold text-lg text-neutral-800 tracking-wider border-2
                     border-transparent active:border-white duration-100 active:text-white"
                 >
                     Tokens list
