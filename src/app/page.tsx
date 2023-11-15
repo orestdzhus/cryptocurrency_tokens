@@ -15,10 +15,10 @@ export default function Home() {
     }, []);
 
     return (
-        <div className="bg-neutral-500 h-screen flex justify-center items-center">
+        <div className="bg-gradient-to-r from-blue-900 to-neutral-900 h-screen flex justify-center items-center">
 
             <div className="h-[800px] w-[500px]">
-                <div className="h-1/2 flex justify-center">
+                <div className="h-1/2 flex justify-center pt-32">
                     <div className="">
                         <img className="h-[200px] w-[200px]" src="/img.png" alt="logo"/>
                     </div>
