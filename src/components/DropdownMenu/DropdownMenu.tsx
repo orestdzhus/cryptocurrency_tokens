@@ -11,7 +11,6 @@ export default function DropdownMenu({coinList}: IProps) {
 
     const [isOpen, setIsOpen] = useState(false);
 
-
     return (
         <div className="absolute top-[468px]">
             <div className="relative flex flex-col items-center w-[340px] h-[440px] top-8">
