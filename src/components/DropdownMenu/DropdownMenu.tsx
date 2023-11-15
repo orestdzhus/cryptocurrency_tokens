@@ -16,8 +16,7 @@ export default function DropdownMenu({coinList}: IProps) {
         <div className="absolute top-[468px]">
             <div className="relative flex flex-col items-center w-[340px] h-[440px] top-8">
                 <button onClick={() => setIsOpen((prev) => !prev)}
-                        className="  border-gray-800
-                        p-3 w-full flex items-center justify-between font-bold text-lg text-amber-50 tracking-wider border-2
+                        className="bg-blue-950 p-3 w-full flex items-center justify-between font-bold text-lg text-blue-300 tracking-wider border-2
                     border-transparent active:border-white duration-100 active:text-white"
                 >
                     Tokens list
@@ -33,14 +32,15 @@ export default function DropdownMenu({coinList}: IProps) {
                         {coinList.map((item, index) => {
 
                             return (
-                                <div className="flex h-[102px] pl-4 border-1">
+                                <div key={item.id} className="flex h-[102px] pl-4">
                                     <div className="w-1/4">
                                         <strong className="pb-4 text-zinc-300 text-lg">{item.symbol}</strong>
                                         <div className="w-[50px] pl-3">
                                             <img className="h-[45px] w-[60px]" src={item.image} alt="coin"/>
                                         </div>
                                     </div>
-                                    <div className="h-[40-px] w-3/4 flex items-center text-orange-300 font-mono text-2xl">{item.name}</div>
+                                    <div
+                                        className="h-[40-px] w-3/4 flex items-center text-orange-300 font-mono text-2xl">{item.name}</div>
                                 </div>
                             );
                         })
